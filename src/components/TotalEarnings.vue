@@ -51,6 +51,9 @@
                 <div class="flex-1 h-2 bg-brand-gray-1 rounded-full"></div>
             </div>
         </div>
+        <button
+            class="w-full mt-3 py-3 px-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 text-base text-[#001540] font-semibold rounded-md"
+        >Claim Earnings</button>
     </div>
 </template>
 

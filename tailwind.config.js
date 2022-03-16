@@ -8,6 +8,7 @@ module.exports = {
             1: "#1B1B1D",
             2: "#8D8D8D",
             3: "#C4C4C4",
+            4: "#C3CFE2",
           },
           black: {
             1: "#101011",
@@ -17,6 +18,8 @@ module.exports = {
           },
           blue: {
             1: "#627EEA",
+            2: "#89F7FE",
+            3: "#66A6FF",
           },
           yellow: {
             1: "#F5A623",
