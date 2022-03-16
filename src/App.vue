@@ -3,6 +3,8 @@
 </script>
 
 <template>
-  <div class="text-blue-300">Hello World</div>
+  <div class="max-w-7xl mx-auto my-20 bg-gray-300 text-white">
+    <router-view></router-view>
+  </div>
 </template>
 

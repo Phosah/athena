@@ -1,6 +1,14 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <main></main>
+  <main>
+    <Sidebar />
+  </main>
 </template>
+
+<script lang="ts">
+import Sidebar from "../components/Sidebar.vue";
+
+export default {
+  name: "Home",
+  components: { Sidebar }
+}
+</script>
