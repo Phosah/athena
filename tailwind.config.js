@@ -15,6 +15,7 @@ module.exports = {
           },
           green: {
             1: "#179942",
+            2: "#009F57",
           },
           blue: {
             1: "#627EEA",
@@ -26,6 +27,7 @@ module.exports = {
           },
           red: {
             1: "#F12D28",
+            2: "#FC0140",
           },
         },
       },
