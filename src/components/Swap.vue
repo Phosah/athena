@@ -76,7 +76,7 @@
                 </div>
             </div>
             <button
-                class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-semibold rounded-md"
+                class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
             >Swap</button>
         </div>
     </div>
