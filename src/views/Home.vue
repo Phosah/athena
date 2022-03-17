@@ -6,20 +6,28 @@
         <p class="border-transparent pb-4">Athena Overview</p>
       </div>
     </div>
-    <MyDashboard />
+    <div v-if="dashboard">
+      <MyDashboard />
+    </div>
+    <div v-if="athena">
+      <AthenaOverview />
+    </div>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import MyDashboard from "../components/MyDashboard.vue"
+import AthenaOverview from "../components/AthenaOverview.vue"
 
 export default defineComponent({
   name: "Home",
-  components: { MyDashboard },
+  components: { MyDashboard, AthenaOverview },
 
   setup() {
-    return {}
+    const athena = ref(true)
+    const dashboard = ref(false)
+    return { athena, dashboard }
   }
 })
 </script>
