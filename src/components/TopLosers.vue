@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="text-xl font-semibold mb-3">My Top Loosers</h3>
+        <h3 class="text-xl font-semibold mb-4">My Top Loosers</h3>
         <div class="px-4 border border-brand-gray-4 border-opacity-10 rounded-md">
             <div class="flex items-center py-6 border-b border-brand-gray-4 border-opacity-10">
                 <div class="flex-1">Assets</div>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="flex-1">
                         <p class="font-semibold">{{ item.cryptoValue }}</p>
-                        <p class="text-sm text-brand-gray-2">{{ item.cashValue }}</p>
+                        <p class="text-xs text-brand-gray-2">{{ item.cashValue }}</p>
                     </div>
                     <div class="flex-1 flex items-center space-x-2 text-brand-red-2">
                         <img src="../assets/down-angle.svg" alt="Downvote icon" />

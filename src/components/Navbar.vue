@@ -11,7 +11,7 @@
                         <p>Account 1</p>
                         <img src="../assets/dropdown-icon.svg" alt="Dropdown icon" />
                     </div>
-                    <p>0xA22C......2F876Da</p>
+                    <p class="text-xs">0xA22C......2F876Da</p>
                 </div>
             </div>
         </div>
