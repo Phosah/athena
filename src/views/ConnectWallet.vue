@@ -1,7 +1,7 @@
 <template>
     <div class="my-20">
         <div
-            class="max-w-xl mx-auto px-10 py-14 bg-brand-black-2 rounded-xl border-2 border-brand-blue-5"
+            class="max-w-xl mx-auto px-10 py-14 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
         >
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-2xl font-semibold">Connect Wallet</h2>

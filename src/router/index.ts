@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import CollectWallet from '../views/ConnectWallet.vue'
+import Exchange from '../views/Exchange.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,7 +14,12 @@ const router = createRouter({
     {
       path: '/connectwallet',
       name: 'ConnectWallet',
-      component: CollectWallet
+      component: Exchange
+    },
+    {
+      path: '/exchange',
+      name: 'Exchange',
+      component: Exchange
     }
     // {
     //   path: '/about',
