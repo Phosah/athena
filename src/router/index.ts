@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import CollectWallet from '../views/ConnectWallet.vue'
 import Exchange from '../views/Exchange.vue'
+import LiquidityPool from '../views/LiquidityPool.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,7 +21,12 @@ const router = createRouter({
       path: '/exchange',
       name: 'Exchange',
       component: Exchange
-    }
+    },
+    {
+      path: '/liquiditypool',
+      name: 'LiquidityPool',
+      component: LiquidityPool
+    },
     // {
     //   path: '/about',
     //   name: 'about',
