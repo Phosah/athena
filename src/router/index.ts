@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import CollectWallet from '../views/ConnectWallet.vue'
 import Exchange from '../views/Exchange.vue'
 import LiquidityPool from '../views/LiquidityPool.vue'
+import AddRemoveLiquidity from '../views/AddRemoveLiquidity.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/liquiditypool',
       name: 'LiquidityPool',
       component: LiquidityPool
+    },
+    {
+      path: '/addremoveliquidity',
+      name: 'AddRemoveLiquidity',
+      component: AddRemoveLiquidity
     },
     // {
     //   path: '/about',

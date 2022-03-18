@@ -3,19 +3,32 @@
         <div
             class="max-w-xl mx-auto p-10 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
         >
-            <h2 class="mb-6 text-2xl font-semibold">Add Liquidity</h2>
-            <div class="flex items-center mb-6">
+            <h2 class="mb-6 text-2xl font-semibold">Remove Liquidity</h2>
+            <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center">
-                    <img src="../assets/pools-bnb-icon.png" alt="doge" />
-                    <img
-                        class="transform -translate-x-4"
-                        src="../assets/pools-btc-icon.png"
-                        alt="btc"
-                    />
+                    <div class="flex items-center">
+                        <img src="../assets/pools-bnb-icon.png" alt="doge" />
+                        <img
+                            class="transform -translate-x-4"
+                            src="../assets/pools-btc-icon.png"
+                            alt="btc"
+                        />
+                    </div>
+                    <div class="font-semibold">BNB/BTC</div>
+                    <img class="ml-2" src="../assets/dropdown-arrow-icon.svg" alt="dropdown icon" />
                 </div>
-                <div class="font-semibold">BNB/BTC</div>
-                <img class="ml-2" src="../assets/dropdown-arrow-icon.svg" alt="dropdown icon" />
+                <div
+                    class="text-brand-blue-3 font-semibold border-b border-brand-blue-3"
+                >Detailed Mode</div>
             </div>
+            <div class="mb-6 p-4 border border-brand-gray-4 border-opacity-10 rounded-2xl">
+                <div class="flex items-center justify-between mb-4">
+                    <p>LP Amount</p>
+                    <p>My Pool LP: 12.09</p>
+                </div>
+                <p class="text-3xl">8.43</p>
+            </div>
+            <h3 class="mb-6 font-semibold">To Receive</h3>
             <div class="mb-6 p-4 border border-brand-gray-4 border-opacity-10 rounded-2xl">
                 <div class="flex items-center justify-between mb-4">
                     <p>First Asset</p>
@@ -54,24 +67,13 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <h3 class="mb-3 text-base font-bold">Summary</h3>
-                <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Rate:</p>
-                    <h2 class="text-lg font-semibold">1 BNB = 0.16 BTC</h2>
-                </div>
-                <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Portion of pool :</p>
-                    <h2 class="text-lg font-semibold">3.2%</h2>
-                </div>
-                <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Total Yield :</p>
-                    <h2 class="text-lg font-semibold">9.3%</h2>
-                </div>
+            <div class="mb-1 flex items-center justify-between">
+                <p class="text-sm">Price :</p>
+                <h2 class="text-lg font-semibold">1 BNB = 0.16 BTC</h2>
             </div>
             <button
                 class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
-            >Add Liquidity</button>
+            >Remove Liquidity</button>
         </div>
     </div>
 </template>
@@ -80,7 +82,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: "AddLiquidity",
+    name: "RemoveLiquidityDetailed",
     components: {},
     setup() {
 
