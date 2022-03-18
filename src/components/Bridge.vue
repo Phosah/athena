@@ -4,7 +4,7 @@
             class="max-w-xl mx-auto p-10 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
         >
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-2xl font-semibold">Swap</h2>
+                <h2 class="text-2xl font-semibold">Bridge</h2>
                 <div class="flex items-center space-x-2">
                     <svg
                         class="w-6 h-6"
@@ -25,7 +25,30 @@
             </div>
             <div class="mb-6 p-4 border border-brand-gray-4 border-opacity-10 rounded-md">
                 <div class="flex items-center justify-between mb-4">
-                    <p>Send</p>
+                    <p>From</p>
+                    <p>To</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div
+                        class="flex items-center space-x-2 p-2 border border-brand-gray-6 bg-brand-gray-6 bg-opacity-10 rounded-full"
+                    >
+                        <img src="../assets/small-eth-logo.png" alt="eth logo" />
+                        <p class="font-semibold">Etherum M...</p>
+                        <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
+                    </div>
+                    <img src="../assets/swap-icon.svg" alt="Swap icon" />
+                    <div
+                        class="flex items-center space-x-2 p-2 border border-brand-purple-1 bg-brand-purple-1 bg-opacity-10 rounded-full"
+                    >
+                        <img src="../assets/small-polygon-logo.png" alt="polygon logo" />
+                        <p class="font-semibold">Polygon Net...</p>
+                        <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
+                    </div>
+                </div>
+            </div>
+            <div class="mb-6 p-4 border border-brand-gray-4 border-opacity-10 rounded-md">
+                <div class="flex items-center justify-between mb-4">
+                    <p>Asset</p>
                     <p>Available : 50.43 BNB</p>
                 </div>
                 <div class="flex items-center justify-between">
@@ -33,30 +56,16 @@
                     <div class="flex items-center space-x-4">
                         <p class="text-brand-blue-3 font-semibold">MAX</p>
                         <div
-                            class="flex items-center space-x-2 p-2 border border-brand-yellow-2 bg-brand-yellow-2 bg-opacity-10 rounded-full"
+                            class="flex items-center space-x-2 p-2 border border-brand-green-4 bg-brand-green-4 bg-opacity-10 rounded-full"
                         >
-                            <img src="../assets/small-bnb-logo.png" alt="bnb logo" />
-                            <p class="font-semibold">BNB</p>
+                            <img src="../assets/small-usdt-logo.png" alt="usdt logo" />
+                            <p class="font-semibold">USDT</p>
                             <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mb-6 p-4 border border-brand-gray-4 border-opacity-10 rounded-md">
-                <div class="mb-4">
-                    <p>Receive</p>
-                </div>
-                <div class="flex items-center justify-between">
-                    <p class="text-3xl">25,099</p>
-                    <div
-                        class="flex items-center space-x-2 p-2 border border-brand-green-4 bg-brand-green-4 bg-opacity-10 rounded-full"
-                    >
-                        <img src="../assets/small-usdt-logo.png" alt="usdt logo" />
-                        <p class="font-semibold">USDT</p>
-                        <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
-                    </div>
-                </div>
-            </div>
+
             <div>
                 <h3 class="mb-3 text-base font-bold">Summary</h3>
                 <div class="mb-1 flex items-center justify-between">
@@ -77,7 +86,7 @@
             </div>
             <button
                 class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
-            >Swap</button>
+            >Bridge</button>
         </div>
     </div>
 </template>
