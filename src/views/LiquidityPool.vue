@@ -32,21 +32,119 @@
                 <img src="../assets/box-view-icon.svg" alt="box view" />
             </div>
         </div>
-        <PoolsTableView />
+        <div v-if="tableView">
+            <PoolsTableView :pools="poolsArr" />
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import LiquiditySearchBox from "../components/LiquiditySearchBox.vue"
 import LiquidityPoolDropdown from "../components/LiquidityPoolDropdown.vue"
 import PoolsTableView from "../components/PoolsTableView.vue"
+import type PoolsTable from '@/types/PoolsTable'
+import poolsImg1 from "../assets/pools-usdt-icon.png"
+import poolsImg2 from "../assets/pools-eth-icon.png"
+import poolsImg3 from "../assets/pools-bnb-icon.png"
+import poolsImg4 from "../assets/pools-btc-icon.png"
+import poolsImg5 from "../assets/pools-polkadot-icon.png"
+import poolsImg6 from "../assets/pools-doge-icon.png"
+import poolsImg7 from "../assets/pools-shiba-inu-icon.png"
+import poolsImg8 from "../assets/pools-rose-icon.png"
 
 export default defineComponent({
     name: "LiquidityPool",
     components: { LiquiditySearchBox, LiquidityPoolDropdown, PoolsTableView },
     setup() {
-
+        const tableView = ref(true)
+        const poolsArr = ref<PoolsTable[]>([
+            {
+                img1: poolsImg1,
+                img2: poolsImg2,
+                alt1: "Usdt",
+                alt2: "Eth",
+                poolName: "USDT/ETH",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "6,870 USD",
+                investmentCrypto: "6500 ATN"
+            },
+            {
+                img1: poolsImg3,
+                img2: poolsImg4,
+                alt1: "bnb",
+                alt2: "btc",
+                poolName: "BNB/BTC",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "0.00 USD",
+                investmentCrypto: "0 ATN"
+            },
+            {
+                img1: poolsImg1,
+                img2: poolsImg5,
+                alt1: "Usdt",
+                alt2: "dot",
+                poolName: "USDT/DOT",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "6,870 USD",
+                investmentCrypto: "6500 ATN"
+            },
+            {
+                img1: poolsImg2,
+                img2: poolsImg6,
+                alt1: "eth",
+                alt2: "doge",
+                poolName: "ETH/DOGE",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "6,870 USD",
+                investmentCrypto: "6500 ATN"
+            },
+            {
+                img1: poolsImg7,
+                img2: poolsImg2,
+                alt1: "shib",
+                alt2: "Eth",
+                poolName: "SHIB/ETH",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "0.00 USD",
+                investmentCrypto: "0 ATN"
+            },
+            {
+                img1: poolsImg5,
+                img2: poolsImg8,
+                alt1: "dot",
+                alt2: "rose",
+                poolName: "DOT/ROSE",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "6,870 USD",
+                investmentCrypto: "6500 ATN"
+            },
+            {
+                img1: poolsImg4,
+                img2: poolsImg6,
+                alt1: "BTC",
+                alt2: "doge",
+                poolName: "BTC/DOGE",
+                liquidity: "5,876,870 USD",
+                apy: "7.9%",
+                volume: "432.985 USD",
+                investmentCurrency: "0.00 USD",
+                investmentCrypto: "0 ATN"
+            },
+        ])
+        return { poolsArr, tableView }
     },
 })
 </script>
