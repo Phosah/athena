@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="flex items-center space-x-4 w-40 h-14 px-6 border border-brand-gray-3 rounded-sm"
+            class="flex items-center space-x-4 w-40 h-14 px-6 border border-brand-gray-3 border-opacity-10 rounded-sm"
         >
             <input
                 class="w-full h-full bg-transparent focus-within:outline-none"

@@ -15,8 +15,8 @@
                 <button class="h-14 px-6 bg-brand-gray-5 rounded-md">Import Pool</button>
             </div>
         </div>
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-4 mb-8">
+        <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
                 <LiquiditySearchBox />
                 <LiquidityPoolDropdown />
                 <div class="flex items-center space-x-3 font-semibold">
@@ -35,6 +35,9 @@
         <div v-if="tableView">
             <PoolsTableView :pools="poolsArr" />
         </div>
+        <div v-if="boxView">
+            <PoolsBoxView :pools="poolsArr" />
+        </div>
     </div>
 </template>
 
@@ -52,12 +55,14 @@ import poolsImg5 from "../assets/pools-polkadot-icon.png"
 import poolsImg6 from "../assets/pools-doge-icon.png"
 import poolsImg7 from "../assets/pools-shiba-inu-icon.png"
 import poolsImg8 from "../assets/pools-rose-icon.png"
+import PoolsBoxView from "../components/PoolsBoxView.vue"
 
 export default defineComponent({
     name: "LiquidityPool",
-    components: { LiquiditySearchBox, LiquidityPoolDropdown, PoolsTableView },
+    components: { LiquiditySearchBox, LiquidityPoolDropdown, PoolsTableView, PoolsBoxView },
     setup() {
-        const tableView = ref(true)
+        const tableView = ref(false)
+        const boxView = ref(true)
         const poolsArr = ref<PoolsTable[]>([
             {
                 img1: poolsImg1,
@@ -144,7 +149,7 @@ export default defineComponent({
                 investmentCrypto: "0 ATN"
             },
         ])
-        return { poolsArr, tableView }
+        return { poolsArr, tableView, boxView }
     },
 })
 </script>
