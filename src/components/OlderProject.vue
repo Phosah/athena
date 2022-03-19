@@ -2,8 +2,10 @@
     <div>
         <div class="grid grid-cols-3 gap-8">
             <div v-for="(project, ix) in projects" :key="ix">
-                <div class="text-sm border border-brand-gray-3 border-opacity-10 rounded-xl">
-                    <img :src="project.img" :alt="project.alt" />
+                <div
+                    class="text-sm border border-brand-gray-3 border-opacity-10 rounded-xl bg-[#C3CFE2] bg-opacity-5"
+                >
+                    <img class="rounded-xl" :src="project.img" :alt="project.alt" />
                     <div class="px-6 py-8">
                         <div class="flex items-center justify-between mb-2">
                             <h2 class="text-xl font-bold">{{ project.title }}</h2>

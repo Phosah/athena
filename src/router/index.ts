@@ -6,6 +6,7 @@ import LiquidityPool from '../views/LiquidityPool.vue'
 import AddRemoveLiquidity from '../views/AddRemoveLiquidity.vue'
 import Projects from '../views/Projects.vue'
 import OlderProjects from '../views/OlderProjects.vue'
+import LaunchpadProject from '../views/LaunchpadProject.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/olderprojects',
       name: 'OlderProjects',
       component: OlderProjects
+    },
+    {
+      path: '/launchpadproject',
+      name: 'LaunchpadProject',
+      component: LaunchpadProject
     },
     // {
     //   path: '/about',
