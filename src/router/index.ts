@@ -4,6 +4,7 @@ import CollectWallet from '../views/ConnectWallet.vue'
 import Exchange from '../views/Exchange.vue'
 import LiquidityPool from '../views/LiquidityPool.vue'
 import AddRemoveLiquidity from '../views/AddRemoveLiquidity.vue'
+import Projects from '../views/Projects.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/addremoveliquidity',
       name: 'AddRemoveLiquidity',
       component: AddRemoveLiquidity
+    },
+    {
+      path: '/projects',
+      name: 'Projects',
+      component: Projects
     },
     // {
     //   path: '/about',
