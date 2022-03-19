@@ -268,16 +268,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-1/3"></div>
+            <div class="w-1/3">
+                <div class="mb-8 border-b border-brand-gray-3 border-opacity-10">
+                    <div class="flex items-center space-x-8">
+                        <p class="border-b-4 border-[#005BEA] pb-4">Tokenomics</p>
+                        <p class="border-transparent pb-4 text-white text-opacity-60">Timeline</p>
+                    </div>
+                </div>
+                <Tokenomics />
+            </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Tokenomics from "@/components/Tokenomics.vue"
 
 export default defineComponent({
     name: "LaunchpadProject",
+    components: { Tokenomics },
     setup() {
 
     },
