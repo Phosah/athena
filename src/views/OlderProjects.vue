@@ -18,45 +18,85 @@
             </div>
             <LaunchpadLaunchPoolButton />
         </div>
-        <div class="grid grid-cols-3 gap-8">
-            <div class="text-sm border border-brand-gray-3 border-opacity-10 rounded-xl">
-                <img src="../assets/older-projects-img1.png" alt="Alpine F1" />
-                <div class="px-6 py-8">
-                    <div class="flex items-center justify-between mb-2">
-                        <h2 class="text-xl font-bold">Alpine F1</h2>
-                        <div class="px-4 py-1 bg-[#FEF8ED] text-[#F19C2C] rounded-md">In Progress</div>
-                    </div>
-                    <p class="mb-6 text-brand-gray-2">A blockchain Fan Token for the Aplhas</p>
-                    <div>
-                        <div class="flex items-center justify-between space-x-2 mb-2">
-                            <p class="text-brand-gray-2">Progress</p>
-                            <h2 class="font-bold">2,490 Participants</h2>
-                        </div>
-                        <div class="w-full h-2 bg-brand-gray-5 rounded-full">
-                            <div
-                                class="h-2 w-1/2 bg-gradient-to-tr from-brand-blue-7 to-brand-blue-8 rounded-full"
-                            ></div>
-                        </div>
-                        <div class="flex items-center justify-between mt-2">
-                            <p>60%</p>
-                            <p>700 ATN</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <OlderProject :projects="projectsArr" />
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import LaunchpadLaunchPoolButton from '@/components/LaunchpadLaunchPoolButton.vue'
+import type LaunchpadProject from "@/types/LaunchpadProject"
+import OlderProject from "@/components/OlderProject.vue"
+import projectImg1 from "../assets/older-projects-img1.png"
+import projectImg2 from "../assets/older-projects-img2.png"
 
 export default defineComponent({
     name: "OlderProjects",
-    components: { LaunchpadLaunchPoolButton },
+    components: { LaunchpadLaunchPoolButton, OlderProject },
     setup() {
-
+        const projectsArr = ref<LaunchpadProject[]>([
+            {
+                img: projectImg1,
+                alt: "Alpine 1",
+                title: "Alpine F1",
+                status: "In Progress",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 2490,
+                progressPercent: "50%",
+                atntokens: 700
+            },
+            {
+                img: projectImg2,
+                alt: "League of Kingdoms",
+                title: "Alpine F1",
+                status: "Completed",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 1290,
+                progressPercent: "45%",
+                atntokens: 400
+            },
+            {
+                img: projectImg1,
+                alt: "Alpine 1",
+                title: "Alpine F1",
+                status: "In Progress",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 2490,
+                progressPercent: "50%",
+                atntokens: 700
+            },
+            {
+                img: projectImg2,
+                alt: "League of Kingdoms",
+                title: "Alpine F1",
+                status: "Completed",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 1290,
+                progressPercent: "45%",
+                atntokens: 400
+            },
+            {
+                img: projectImg1,
+                alt: "Alpine 1",
+                title: "Alpine F1",
+                status: "In Progress",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 2490,
+                progressPercent: "50%",
+                atntokens: 700
+            },
+            {
+                img: projectImg2,
+                alt: "League of Kingdoms",
+                title: "Alpine F1",
+                status: "Completed",
+                content: "A blockchain Fan Token for the Aplhas",
+                participants: 1290,
+                progressPercent: "45%",
+                atntokens: 400
+            },
+        ])
+        return { projectsArr }
     },
 })
 </script>
