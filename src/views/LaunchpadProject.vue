@@ -275,21 +275,30 @@
                         <p class="border-transparent pb-4 text-white text-opacity-60">Timeline</p>
                     </div>
                 </div>
-                <Tokenomics />
+                <div v-if="tokenomics">
+                    <Tokenomics />
+                </div>
+                <div v-if="timeline">
+                    <Timeline />
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import Tokenomics from "@/components/Tokenomics.vue"
+import Timeline from "../components/Timeline.vue"
 
 export default defineComponent({
     name: "LaunchpadProject",
-    components: { Tokenomics },
+    components: { Tokenomics, Timeline },
     setup() {
+        const tokenomics = ref(false)
+        const timeline = ref(true)
 
+        return { tokenomics, timeline }
     },
 })
 </script>
