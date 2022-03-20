@@ -6,8 +6,10 @@ import LiquidityPool from '../views/LiquidityPool.vue'
 import AddRemoveLiquidity from '../views/AddRemoveLiquidity.vue'
 import Projects from '../views/Projects.vue'
 import OlderProjects from '../views/OlderProjects.vue'
-import LaunchpadProject from '../views/LaunchpadProject.vue'
+import LaunchpadSingleProject from '../views/LaunchpadSingleProject.vue'
 import InvestInProject from '../views/InvestInProject.vue'
+import LaunchpoolSingleProject from '../views/LaunchpoolSingleProject.vue'
+import ClaimRewards from '../views/ClaimRewards.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,14 +50,24 @@ const router = createRouter({
       component: OlderProjects
     },
     {
-      path: '/launchpadproject',
-      name: 'LaunchpadProject',
-      component: LaunchpadProject
+      path: '/launchpadsingleproject',
+      name: 'LaunchpadSingleProject',
+      component: LaunchpadSingleProject
     },
     {
       path: '/investinproject',
       name: 'InvestInProject',
       component: InvestInProject
+    },
+    {
+      path: '/launchpoolsingleproject',
+      name: 'LaunchpoolSingleProject',
+      component: LaunchpoolSingleProject
+    },
+    {
+      path: '/claimrewards',
+      name: 'ClaimRewards',
+      component: ClaimRewards
     },
     // {
     //   path: '/about',

@@ -292,7 +292,7 @@ import Tokenomics from "@/components/Tokenomics.vue"
 import Timeline from "../components/Timeline.vue"
 
 export default defineComponent({
-    name: "LaunchpadProject",
+    name: "LaunchpadSingleProject",
     components: { Tokenomics, Timeline },
     setup() {
         const tokenomics = ref(false)
