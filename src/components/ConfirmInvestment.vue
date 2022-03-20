@@ -1,7 +1,7 @@
 <template>
     <div class="my-10">
         <div
-            class="max-w-xl mx-auto p-6 pb-12 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
+            class="max-w-xl mx-auto px-10 pt-6 pb-12 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
         >
             <div class="flex justify-end mb-4">
                 <svg
@@ -17,21 +17,21 @@
                     />
                 </svg>
             </div>
-            <div class="flex justify-center mb-6">
+            <div class="flex mb-6">
                 <img src="../assets/risk-warning-icon.png" alt="Risk warning" />
             </div>
-            <div class="w-9/12 mx-auto">
-                <div class="mb-12 text-center">
-                    <h2 class="mb-6 text-xl font-bold">Risk Warning</h2>
+            <div class>
+                <div class="mb-12">
+                    <h2 class="mb-6 text-xl font-bold">Confirm Investment</h2>
                     <p
                         class="text-sm"
-                    >Adding liquidity into a liquid pool and becoming a liquidity provider is not risk-free. When the market price of tokens fluctuates greatly, the staking income may be lower than the income of ordinary holding of the tokens, and losses may even occur. For more details about the principle of Liquidity, please refer to Binance Liquid Swap Terms of Use.</p>
+                    >You have requested to invest 1500 ATN. Once you confirm investment, your ATN would be locked until the final token distribution. The final amount of the CRV token you would get might be less than the invested amount and your balance along side your new tokens would be sent back to your wallet. To get more insight on how this works, click here to Learn more</p>
                 </div>
                 <div class="flex items-center space-x-6">
                     <button class="flex-1 py-4 bg-[#2F2F36] font-bold rounded-md">Cancel</button>
                     <button
                         class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
-                    >Continue</button>
+                    >Confirm Investment</button>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: "LiquidityInfo",
+    name: "ConfirmInvestment",
     components: {},
     setup() {
 
