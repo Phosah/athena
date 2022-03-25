@@ -144,12 +144,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LaunchpadLaunchPoolButton from '../components/LaunchpadLaunchPoolButton.vue'
+import LaunchpadLaunchpoolButton from '../components/LaunchpadLaunchpoolButton.vue'
 
 export default defineComponent({
     name: "Launchpad",
     setup() {
     },
-    components: { LaunchpadLaunchPoolButton }
+    components: { LaunchpadLaunchpoolButton }
 })
 </script>

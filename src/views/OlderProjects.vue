@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import LaunchpadLaunchPoolButton from '@/components/LaunchpadLaunchPoolButton.vue'
+import LaunchpadLaunchpoolButton from '@/components/LaunchpadLaunchpoolButton.vue'
 import type LaunchpadProject from "@/types/LaunchpadProject"
 import OlderProject from "@/components/OlderProject.vue"
 import projectImg1 from "../assets/older-projects-img1.png"
@@ -32,7 +32,7 @@ import projectImg2 from "../assets/older-projects-img2.png"
 
 export default defineComponent({
     name: "OlderProjects",
-    components: { LaunchpadLaunchPoolButton, OlderProject },
+    components: { LaunchpadLaunchpoolButton, OlderProject },
     setup() {
         const projectsArr = ref<LaunchpadProject[]>([
             {
