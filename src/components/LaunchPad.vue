@@ -5,7 +5,7 @@
                 <h2 class="mb-1 text-lg font-bold">Launchpad</h2>
                 <p>Get whitelist priviledges on pre-sales of top verified web3 projects</p>
             </div>
-            <LaunchpadLaunchPoolButton />
+            <LaunchpadLaunchpoolButton />
         </div>
         <div class="flex items-center mb-16 divide-x-2 divide-white divide-opacity-10">
             <div class="flex-1">
