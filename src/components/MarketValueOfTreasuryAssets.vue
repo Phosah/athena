@@ -9,7 +9,11 @@
             <span class="text-brand-gray-2">Today</span>
         </h3>
         <div class="mt-2">
-            <img src="../assets/treasury-assets-graph.png" alt="Treasury assets graph" />
+            <img
+                class="w-full"
+                src="../assets/treasury-assets-graph.png"
+                alt="Treasury assets graph"
+            />
         </div>
     </div>
 </template>

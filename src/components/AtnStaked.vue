@@ -9,7 +9,7 @@
             <span class="text-brand-gray-2">Today</span>
         </h3>
         <div class="mt-2">
-            <img src="../assets/atn-staked-graph.png" alt="ATN staked graph" />
+            <img class="w-full" src="../assets/atn-staked-graph.png" alt="ATN staked graph" />
         </div>
     </div>
 </template>

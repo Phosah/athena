@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-7xl mx-auto my-20 bg-brand-black-1 text-white">
+  <div class="flex max-w-[2000px] mx-auto bg-brand-black-1 text-white">
     <div class="flex self-stretch">
       <Sidebar />
     </div>

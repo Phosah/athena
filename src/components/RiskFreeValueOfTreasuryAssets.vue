@@ -10,6 +10,7 @@
         </h3>
         <div class="mt-2">
             <img
+                class="w-full"
                 src="../assets/riskfree-treasury-assets-graph.png"
                 alt="Risk free Treasury assets graph"
             />

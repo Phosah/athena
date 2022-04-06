@@ -6,7 +6,11 @@
         </div>
         <h3 class="font-semibold">234 Days</h3>
         <div class="mt-2">
-            <img src="../assets/runway-available-graph.png" alt="Runway available graph" />
+            <img
+                class="w-full"
+                src="../assets/runway-available-graph.png"
+                alt="Runway available graph"
+            />
         </div>
     </div>
 </template>

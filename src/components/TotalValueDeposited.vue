@@ -9,7 +9,7 @@
             <span class="text-brand-gray-2">Today</span>
         </h3>
         <div class="mt-2">
-            <img src="../assets/totaldeposit-graph.png" alt="Total deposit graph" />
+            <img class="w-full" src="../assets/totaldeposit-graph.png" alt="Total deposit graph" />
         </div>
     </div>
 </template>
