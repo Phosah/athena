@@ -1,10 +1,10 @@
 <template>
     <main>
-        <div class="flex space-x-12 mt-10">
-            <div class="w-7/12">
+        <div class="flex space-x-20 mt-10">
+            <div class="w-8/12">
                 <TotalBalance />
             </div>
-            <div class="w-5/12">
+            <div class="w-4/12">
                 <TotalEarnings />
             </div>
         </div>

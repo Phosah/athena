@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-3">
+    <div class="mb-8">
         <p class="mb-2 text-sm text-brand-gray-2">Total earnings:</p>
         <div class="flex items-end space-x-1">
             <h2 class="text-2xl font-semibold">56,000 ATH</h2>
