@@ -10,7 +10,7 @@
         </div>
     </div>
     <div>
-        <img src="../assets/total-balance-graph.png" alt="Total balance graph" />
+        <img class="w-full" src="../assets/total-balance-graph.png" alt="Total balance graph" />
     </div>
 </template>
 
