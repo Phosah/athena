@@ -48,6 +48,9 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        sora: ["Sora", "sans serif"],
+      },
     },
   },
   plugins: [],

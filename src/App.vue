@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-[2000px] mx-auto bg-brand-black-1 text-white">
+  <div class="font-test-founders-medium flex max-w-[2000px] mx-auto bg-brand-black-1 text-white">
     <div class="flex self-stretch">
       <Sidebar />
     </div>
@@ -16,3 +16,15 @@ import Sidebar from "./components/Sidebar.vue";
 
 </script>
 
+<style>
+@font-face {
+  font-family: "Test Founders Grotesk";
+  font-weight: 500;
+  src: local("Test Founders Grotesk"), url("Test-Founders-Grotesk-Medium.otf");
+}
+
+.font-test-founders-medium {
+  font-family: "Test Founders Grotest", sans-serif;
+  font-weight: 500;
+}
+</style>
