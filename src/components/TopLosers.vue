@@ -1,26 +1,28 @@
 <template>
     <div>
-        <h3 class="text-xl font-semibold mb-4">My Top Loosers</h3>
+        <h3 class="text-2xl font-test-founders-semibold mb-4">My Top Loosers</h3>
         <div class="px-4 border border-brand-gray-4 border-opacity-10 rounded-md">
-            <div class="flex items-center py-6 border-b border-brand-gray-4 border-opacity-10">
+            <div
+                class="font-test-founders-medium flex items-center py-6 border-b border-brand-gray-4 border-opacity-10"
+            >
                 <div class="flex-1">Assets</div>
                 <div class="flex-1">Wallet</div>
                 <div class="flex-1">24h</div>
                 <div class="flex-1">Action</div>
             </div>
             <div v-for="(item, ix) in assets" :key="ix">
-                <div class="flex items-center py-6">
+                <div class="font-sora font-semibold flex items-center py-6">
                     <div class="flex-1 flex items-center space-x-3">
                         <img :src="item.assetImg" :alt="item.assetAlt" />
-                        <p class="font-semibold">{{ item.assetName }}</p>
+                        <p class>{{ item.assetName }}</p>
                     </div>
                     <div class="flex-1">
-                        <p class="font-semibold">{{ item.cryptoValue }}</p>
+                        <p class>{{ item.cryptoValue }}</p>
                         <p class="text-xs text-brand-gray-2">{{ item.cashValue }}</p>
                     </div>
                     <div class="flex-1 flex items-center space-x-2 text-brand-red-2">
                         <img src="../assets/down-angle.svg" alt="Downvote icon" />
-                        <p class="font-semibold">{{ item.percentIncrease }}</p>
+                        <p class>{{ item.percentIncrease }}</p>
                     </div>
                     <div class="flex-1">
                         <svg

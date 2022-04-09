@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-test-founders-medium flex max-w-[2000px] mx-auto bg-brand-black-1 text-white min-h-screen"
+    class="font-test-founders-regular flex max-w-[2000px] mx-auto bg-brand-black-1 text-white min-h-screen"
   >
     <div class="flex self-stretch">
       <Sidebar />
@@ -21,21 +21,43 @@ import Sidebar from "./components/Sidebar.vue";
 <style>
 @font-face {
   font-family: "Test Founders Grotesk";
+  font-weight: 400;
+  src: local("Test Founders Grotesk"),
+    url("./fonts/Test-Founders-Grotesk-Regular.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Test Founders Grotesk";
   font-weight: 500;
-  src: local("Test Founders Grotesk"), url("Test-Founders-Grotesk-Medium.otf");
+  src: local("Test Founders Grotesk"),
+    url("./fonts/Test-Founders-Grotesk-Medium.otf") format("OpenType");
 }
 @font-face {
   font-family: "Test Founders Grotesk";
   font-weight: 600;
-  src: local("Test Founders Grotesk"), url("Test-Founders-Grotesk-Semibold.otf");
+  src: local("Test Founders Grotesk"),
+    url("./fonts/Test-Founders-Grotesk-Semibold.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Test Founders Grotesk";
+  font-weight: 700;
+  src: local("Test Founders Grotesk"),
+    url("./fonts/Test-Founders-Grotesk-Bold.otf") format("OpenType");
 }
 
+.font-test-founders-regular {
+  font-family: "Test Founders Grotesk", sans-serif;
+  font-weight: 400;
+}
 .font-test-founders-medium {
-  font-family: "Test Founders Grotest", sans-serif;
+  font-family: "Test Founders Grotesk", sans-serif;
   font-weight: 500;
 }
 .font-test-founders-semibold {
-  font-family: "Test Founders Grotest", sans-serif;
+  font-family: "Test Founders Grotesk", sans-serif;
   font-weight: 600;
+}
+.font-test-founders-bold {
+  font-family: "Test Founders Grotesk", sans-serif;
+  font-weight: 700;
 }
 </style>

@@ -8,7 +8,7 @@
             <div>
                 <router-link @click="isActive = 'dashboard'" to="/">
                     <div
-                        :class="isActive === 'dashboard' ? 'text-white' : ''"
+                        :class="isActive === 'dashboard' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/dashboard-icon.svg" alt="Dashboard icon" />
@@ -19,7 +19,7 @@
             <div>
                 <router-link @click="isActive = 'exchange'" to="/exchange">
                     <div
-                        :class="isActive === 'exchange' ? 'text-white' : ''"
+                        :class="isActive === 'exchange' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/exchange-icon.svg" alt="Dashboard icon" />
@@ -30,7 +30,7 @@
             <div>
                 <router-link @click="isActive = 'liquiditypool'" to="/liquiditypool">
                     <div
-                        :class="isActive === 'liquiditypool' ? 'text-white' : ''"
+                        :class="isActive === 'liquiditypool' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/liquidity-pool-icon.svg" alt="Dashboard icon" />
@@ -41,7 +41,7 @@
             <div>
                 <router-link @click="isActive = 'farm'" to="/farm">
                     <div
-                        :class="isActive === 'farm' ? 'text-white' : ''"
+                        :class="isActive === 'farm' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/farm-icon.svg" alt="Dashboard icon" />
@@ -52,7 +52,7 @@
             <div>
                 <router-link @click="isActive = 'projects'" to="/projects">
                     <div
-                        :class="isActive === 'projects' ? 'text-white' : ''"
+                        :class="isActive === 'projects' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/projects-icon.svg" alt="Dashboard icon" />
@@ -63,7 +63,7 @@
             <div>
                 <router-link @click="isActive = 'trade'" to="/trade">
                     <div
-                        :class="isActive === 'trade' ? 'text-white' : ''"
+                        :class="isActive === 'trade' ? 'font-test-founders-semibold text-white' : ''"
                         class="flex items-center space-x-3 mb-8"
                     >
                         <img src="../assets/projects-icon.svg" alt="Dashboard icon" />

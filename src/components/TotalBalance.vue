@@ -1,11 +1,11 @@
 <template>
     <div class="mb-3">
-        <p class="mb-2 text-sm text-brand-gray-2">Total balance:</p>
+        <p class="mb-2 font-test-founders-medium text-brand-gray-2">Total balance:</p>
         <div class="flex items-center space-x-4">
-            <h2 class="text-2xl font-semibold">$45,000.15</h2>
+            <h2 class="text-3xl font-test-founders-bold">$45,000.15</h2>
             <div class="flex items-center space-x-1">
                 <img src="../assets/up-arrow-icon.svg" alt="Up arrow" />
-                <p>15.5%</p>
+                <p class="font-test-founders-medium text-brand-green-5">15.5%</p>
             </div>
         </div>
     </div>
