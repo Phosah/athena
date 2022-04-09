@@ -1,6 +1,6 @@
 <template>
-    <div class="flex items-center justify-between space-x-4 mb-12">
-        <p class="text-2xl font-semibold">Dashboard</p>
+    <div class="flex items-center justify-between space-x-4 mb-14">
+        <p class="text-4xl font-test-founders-semibold">Dashboard</p>
         <div class="flex items-center space-x-8">
             <SearchBox />
             <NotificationBox />
@@ -8,7 +8,7 @@
                 <img src="../assets/profile-img.png" alt="Profile photo" />
                 <div>
                     <div class="flex items-center space-x-3">
-                        <p>Account 1</p>
+                        <p class="font-test-founders-semibold">Account 1</p>
                         <img src="../assets/dropdown-icon.svg" alt="Dropdown icon" />
                     </div>
                     <p class="text-xs">0xA22C......2F876Da</p>

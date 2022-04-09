@@ -4,12 +4,12 @@
       <div class="flex items-center space-x-8">
         <p
           @click="selectTab('dashboard')"
-          :class="selectedTab === 'dashboard' ? 'border-[#005BEA]' : 'border-transparent'"
+          :class="selectedTab === 'dashboard' ? 'border-[#005BEA] font-test-founders-semibold' : 'border-transparent text-white text-opacity-60'"
           class="border-b-4 pb-4 cursor-pointer"
         >My dashboard</p>
         <p
           @click="selectTab('athena')"
-          :class="selectedTab === 'athena' ? 'border-[#005BEA]' : 'border-transparent'"
+          :class="selectedTab === 'athena' ? 'border-[#005BEA] font-test-founders-semibold' : 'border-transparent text-white text-opacity-60'"
           class="border-b-4 pb-4 cursor-pointer"
         >Athena Overview</p>
       </div>
