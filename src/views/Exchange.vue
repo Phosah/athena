@@ -7,7 +7,6 @@
         <div v-show="selectedTab === 'bridge'">
             <Bridge />
         </div>
-        <SwapInfo />
     </div>
 </template>
 
@@ -25,7 +24,6 @@ export default defineComponent({
         const selectedTab = ref('swap')
         const selectTab = (tab: string) => {
             selectedTab.value = tab
-            console.log("clicked", selectedTab.value)
 
         }
         return { selectedTab, selectTab }

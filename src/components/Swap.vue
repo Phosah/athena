@@ -4,7 +4,7 @@
             class="max-w-xl mx-auto p-10 bg-brand-black-2 rounded-2xl border-2 border-brand-blue-5"
         >
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-2xl font-semibold">Swap</h2>
+                <h2 class="text-2xl font-sora font-bold">Swap</h2>
                 <div class="flex items-center space-x-2">
                     <svg
                         class="w-6 h-6"
@@ -31,12 +31,12 @@
                 <div class="flex items-center justify-between">
                     <p class="text-3xl">50.43</p>
                     <div class="flex items-center space-x-4">
-                        <p class="text-brand-blue-3 font-semibold">MAX</p>
+                        <p class="text-brand-blue-3 font-test-founders-semibold">MAX</p>
                         <div
                             class="flex items-center space-x-2 p-2 border border-brand-yellow-2 bg-brand-yellow-2 bg-opacity-10 rounded-full"
                         >
                             <img src="../assets/small-bnb-logo.png" alt="bnb logo" />
-                            <p class="font-semibold">BNB</p>
+                            <p class="font-test-founders-semibold">BNB</p>
                             <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
                         </div>
                     </div>
@@ -52,32 +52,34 @@
                         class="flex items-center space-x-2 p-2 border border-brand-green-4 bg-brand-green-4 bg-opacity-10 rounded-full"
                     >
                         <img src="../assets/small-usdt-logo.png" alt="usdt logo" />
-                        <p class="font-semibold">USDT</p>
+                        <p class="font-test-founders-semibold">USDT</p>
                         <img src="../assets/dropdown-arrow-icon.svg" alt="Arrow icon" />
                     </div>
                 </div>
             </div>
             <div>
-                <h3 class="mb-3 text-base font-bold">Summary</h3>
+                <h3 class="mb-3 text-base font-test-founders-bold">Summary</h3>
                 <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Spillage:</p>
+                    <p class>Spillage:</p>
                     <div class="flex items-center space-x-1">
-                        <h2 class="text-lg font-semibold">0% SPILLAGE</h2>
+                        <h2 class="text-lg font-test-founders-bold">0% SPILLAGE</h2>
                         <img src="../assets/edit-icon.svg" alt="Edit icon" />
                     </div>
                 </div>
                 <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Price:</p>
-                    <h2 class="text-lg font-semibold">1 BNB = 459.98 USDT</h2>
+                    <p class>Price:</p>
+                    <h2 class="text-lg font-test-founders-bold">1 BNB = 459.98 USDT</h2>
                 </div>
                 <div class="mb-1 flex items-center justify-between">
-                    <p class="text-sm">Fee (0.2%):</p>
-                    <h2 class="text-lg font-semibold">0.0 BNB</h2>
+                    <p class>Fee (0.2%):</p>
+                    <h2 class="text-lg font-test-founders-bold">0.0 BNB</h2>
                 </div>
             </div>
             <button
-                class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
-            >Swap</button>
+                class="mt-8 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-sora font-bold rounded-md"
+            >
+                <router-link to="/swapsuccessful">Swap</router-link>
+            </button>
         </div>
     </div>
 </template>

@@ -5,14 +5,14 @@
         >
             <div
                 @click="switchTab('swap')"
-                :class="selectedTab === 'swap' ? 'h-10 bg-brand-gray-5 text-white font-bold rounded-full' : 'text-brand-gray-3'"
+                :class="selectedTab === 'swap' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Swap</button>
             </div>
             <div
                 @click="switchTab('bridge')"
-                :class="selectedTab === 'bridge' ? 'h-10 bg-brand-gray-5 text-white font-bold rounded-full' : 'text-brand-gray-3'"
+                :class="selectedTab === 'bridge' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Bridge</button>
@@ -28,7 +28,7 @@ export default defineComponent({
     name: "SwapAndBridgeButton",
 
     setup(props, { emit }) {
-        const selectedTab = ref('')
+        const selectedTab = ref('swap')
         const switchTab = (tab: string) => {
             emit("changeTab", tab)
             selectedTab.value = tab

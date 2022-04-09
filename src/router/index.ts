@@ -10,6 +10,7 @@ import LaunchpadSingleProject from '../views/LaunchpadSingleProject.vue'
 import InvestInProject from '../views/InvestInProject.vue'
 import LaunchpoolSingleProject from '../views/LaunchpoolSingleProject.vue'
 import ClaimRewards from '../views/ClaimRewards.vue'
+import SwapSuccessful from '../views/SwapSuccessful.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +69,11 @@ const router = createRouter({
       path: '/claimrewards',
       name: 'ClaimRewards',
       component: ClaimRewards
+    },
+    {
+      path: '/swapsuccessful',
+      name: 'SwapSuccessful',
+      component: SwapSuccessful
     },
     // {
     //   path: '/about',

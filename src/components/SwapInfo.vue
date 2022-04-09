@@ -22,15 +22,17 @@
             </div>
             <div class="w-9/12 mx-auto">
                 <div class="mb-8 text-center">
-                    <h2 class="mb-6 text-xl font-bold">Swap Successful</h2>
+                    <h2 class="mb-6 text-2xl font-test-founders-bold">Swap Successful</h2>
                     <p
-                        class="text-sm"
+                        class
                     >The transaction has been successfully processed in the liquidity pool. The transfer may still be in process. Please check the transaction record later.</p>
                 </div>
                 <div class="flex items-center space-x-6">
-                    <button class="flex-1 py-4 bg-[#2F2F36] font-bold rounded-md">Make a swap</button>
                     <button
-                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
+                        class="flex-1 py-4 bg-[#2F2F36] font-test-founders-bold rounded-md"
+                    >Make a swap</button>
+                    <button
+                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-test-founders-bold rounded-md"
                     >View history</button>
                 </div>
             </div>
