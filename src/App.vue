@@ -21,6 +21,12 @@ import Sidebar from "./components/Sidebar.vue";
 <style>
 @font-face {
   font-family: "Test Founders Grotesk";
+  font-weight: 300;
+  src: local("Test Founders Grotesk"),
+    url("./fonts/Test-Founders-Grotesk-Light.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Test Founders Grotesk";
   font-weight: 400;
   src: local("Test Founders Grotesk"),
     url("./fonts/Test-Founders-Grotesk-Regular.otf") format("OpenType");
@@ -44,6 +50,10 @@ import Sidebar from "./components/Sidebar.vue";
     url("./fonts/Test-Founders-Grotesk-Bold.otf") format("OpenType");
 }
 
+.font-test-founders-light {
+  font-family: "Test Founders Grotesk", sans-serif;
+  font-weight: 300;
+}
 .font-test-founders-regular {
   font-family: "Test Founders Grotesk", sans-serif;
   font-weight: 400;

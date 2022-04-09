@@ -1,7 +1,9 @@
 <template>
     <div class="grid grid-cols-3 gap-8">
         <div v-for="(pool, ix) in pools" :key="ix">
-            <div class="p-6 border border-brand-gray-3 border-opacity-10 rounded-md text-sm">
+            <div
+                class="p-6 border border-brand-gray-3 border-opacity-10 rounded-md font-test-founders-semibold"
+            >
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <div class="flex items-center">
@@ -10,25 +12,27 @@
                         </div>
                         <div class="font-bold">{{ pool.poolName }}</div>
                     </div>
-                    <div>
-                        APY:
-                        <span class="font-bold">{{ pool.apy }}</span>
+                    <div class="text-lg">
+                        <span class="font-test-founders-regular">APY:</span>
+                        {{ pool.apy }}
                     </div>
                 </div>
                 <div class="my-6 border-b border-brand-gray-3 opacity-10"></div>
                 <div class="flex items-center justify-between mb-6">
-                    <p class="text-brand-gray-3">Total Liquidity</p>
+                    <p class="text-brand-gray-7 font-test-founders-regular">Total Liquidity</p>
                     <h3 class="font-bold">{{ pool.liquidity }}</h3>
                 </div>
                 <div class="flex items-center justify-between mb-6">
-                    <p class="text-brand-gray-3">My Investment</p>
+                    <p class="text-brand-gray-7 font-test-founders-regular">My Investment</p>
                     <h3 class="font-bold">{{ pool.investmentCurrency }}</h3>
                 </div>
                 <div class="flex items-center justify-between mb-6">
-                    <p class="text-brand-gray-3">Earned</p>
+                    <p class="text-brand-gray-7 font-test-founders-regular">Earned</p>
                     <h3 class="font-bold">{{ pool.investmentCrypto }}</h3>
                 </div>
-                <div class="flex items-center space-x-4 justify-between mb-6">
+                <div
+                    class="flex items-center space-x-4 justify-between mb-6 font-sora font-semibold text-xs"
+                >
                     <button class="flex-auto h-14 px-6 bg-brand-gray-5 rounded-md">Remove</button>
                     <button
                         class="flex-auto h-14 px-6 border border-brand-blue-4 rounded-md"

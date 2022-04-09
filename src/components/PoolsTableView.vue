@@ -1,5 +1,5 @@
 <template>
-    <div class="text-sm font-semibold">
+    <div class="font-test-founders-semibold">
         <div class="flex items-center mb-8">
             <div class="flex-1 flex items-center">
                 <p>Pool</p>
@@ -27,7 +27,7 @@
                         <img :src="pool.img1" :alt="pool.alt1" />
                         <img class="transform -translate-x-4" :src="pool.img2" :alt="pool.alt2" />
                     </div>
-                    <div>{{ pool.poolName }}</div>
+                    <div class="text-lg">{{ pool.poolName }}</div>
                 </div>
                 <div class="flex-1">{{ pool.liquidity }}</div>
                 <div class="w-28">{{ pool.apy }}</div>

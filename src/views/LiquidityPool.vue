@@ -2,40 +2,54 @@
     <div>
         <div class="flex items-center justify-between mb-8">
             <div>
-                <h2 class="mb-1 text-lg font-bold">All Pools</h2>
+                <h2 class="mb-1 text-2xl font-test-founders-semibold">All Pools</h2>
                 <p>
                     Liquidity providers earn rewards trading fees in the pools.
                     <span
-                        class="font-bold border-b border-white"
+                        class="font-test-founders-bold border-b border-white"
                     >Learn More</span>
                 </p>
             </div>
-            <div class="space-x-3">
-                <button class="h-14 px-6 border border-brand-blue-4 rounded-md">Create Pool</button>
-                <button class="h-14 px-6 bg-brand-gray-5 rounded-md">Import Pool</button>
+            <div class="space-x-3 text-xs">
+                <button
+                    class="font-sora font-semibold h-14 px-6 border border-brand-blue-4 rounded-md"
+                >Create Pool</button>
+                <button
+                    class="font-sora font-semibold h-14 px-6 bg-brand-gray-5 rounded-md"
+                >Import Pool</button>
             </div>
         </div>
         <div class="flex items-center justify-between mb-8">
             <div class="flex items-center space-x-4">
                 <LiquiditySearchBox />
                 <LiquidityPoolDropdown />
-                <div class="flex items-center space-x-3 font-semibold">
+                <div class="flex items-center space-x-3 font-test-founders-medium">
                     <input class type="checkbox" name="terms" id="terms" />
                     <label for="terms">Only available assets</label>
                 </div>
             </div>
             <div class="flex items-center space-x-4">
-                <p>Switch view:</p>
-                <div class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-md">
+                <p class="font-test-founders-medium">Switch view:</p>
+                <div
+                    @click="selectView('table')"
+                    :class="selectedView === 'table' ? 'w-10 h-10 bg-brand-gray-5 rounded-md' : ''"
+                    class="flex items-center justify-center"
+                >
                     <img src="../assets/table-view-icon.svg" alt="table view" />
                 </div>
-                <img src="../assets/box-view-icon.svg" alt="box view" />
+                <div
+                    @click="selectView('box')"
+                    :class="selectedView === 'box' ? 'w-10 h-10 bg-brand-gray-5 rounded-md' : ''"
+                    class="flex items-center justify-center"
+                >
+                    <img src="../assets/box-view-icon.svg" alt="box view" />
+                </div>
             </div>
         </div>
-        <div v-if="tableView">
+        <div v-show="selectedView == 'table'">
             <PoolsTableView :pools="poolsArr" />
         </div>
-        <div v-if="boxView">
+        <div v-show="selectedView == 'box'">
             <PoolsBoxView :pools="poolsArr" />
         </div>
     </div>
@@ -61,8 +75,10 @@ export default defineComponent({
     name: "LiquidityPool",
     components: { LiquiditySearchBox, LiquidityPoolDropdown, PoolsTableView, PoolsBoxView },
     setup() {
-        const tableView = ref(false)
-        const boxView = ref(true)
+        const selectedView = ref('')
+        const selectView = (tab: string) => {
+            selectedView.value = tab
+        }
         const poolsArr = ref<PoolsTable[]>([
             {
                 img1: poolsImg1,
@@ -149,7 +165,7 @@ export default defineComponent({
                 investmentCrypto: "0 ATN"
             },
         ])
-        return { poolsArr, tableView, boxView }
+        return { poolsArr, selectView, selectedView }
     },
 })
 </script>
