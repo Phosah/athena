@@ -1,5 +1,7 @@
 <template>
-  <div class="font-test-founders-medium flex max-w-[2000px] mx-auto bg-brand-black-1 text-white">
+  <div
+    class="font-test-founders-medium flex max-w-[2000px] mx-auto bg-brand-black-1 text-white min-h-screen"
+  >
     <div class="flex self-stretch">
       <Sidebar />
     </div>
