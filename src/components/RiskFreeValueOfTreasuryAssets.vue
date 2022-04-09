@@ -4,9 +4,9 @@
             <p class="text-brand-gray-2 font-semibold">Risk Free value of Treasury Assets</p>
             <img src="../assets/info-icon.svg" alt="Info icon" />
         </div>
-        <h3 class="font-semibold">
+        <h3 class="font-test-founders-bold text-xl">
             $237,987,990
-            <span class="text-brand-gray-2">Today</span>
+            <span class="text-brand-gray-2 font-test-founders-medium">Today</span>
         </h3>
         <div class="mt-2">
             <img

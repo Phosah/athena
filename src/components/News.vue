@@ -42,7 +42,7 @@
         <div class="grid grid-cols-3 gap-4">
             <div v-for="(item, ix) in news" :key="ix">
                 <div
-                    class="flex items-center space-x-4 p-4 border border-brand-gray-4 border-opacity-10 rounded-md"
+                    class="flex items-center space-x-4 py-4 px-6 border border-brand-gray-4 border-opacity-10 rounded-md"
                 >
                     <div class>
                         <p class="mb-3 font-test-founders-medium">{{ item.content }}</p>
