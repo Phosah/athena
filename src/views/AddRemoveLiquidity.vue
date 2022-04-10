@@ -1,11 +1,11 @@
 <template>
     <div>
-        <AddRemoveLiquidityButton @changeTab="selectTab" />
+        <AddRemoveLiquidityButton />
 
-        <AddLiquidity v-show="activeTab == 'add'" @changeTab="showTab" />
-        <ClaimEarnings v-show="selectedTab == 'claim'" @changeTab="showTab" />
-        <RemoveLiquidity v-show="selectedTab == 'remove'" @changeTab="showTab" />
-        <RemoveLiquidityDetailed v-show="selectedTab == 'remove'" />
+        <AddLiquidity v-show="activeTab == 'add'" />
+        <ClaimEarnings v-show="activeTab == 'claim'" />
+        <RemoveLiquidity v-show="activeTab == 'remove'" />
+        <RemoveLiquidityDetailed v-show="activeTab == 'remove'" />
         <LiquidityInfo />
         <div>{{ activeTab }}</div>
     </div>
@@ -26,25 +26,15 @@ export default defineComponent({
     components: { AddRemoveLiquidityButton, AddLiquidity, ClaimEarnings, RemoveLiquidity, RemoveLiquidityDetailed, LiquidityInfo },
     setup() {
         const liquidity = useLiquidityStore()
-        const { activeTab } = liquidity
+        const { activeTab } = storeToRefs(liquidity)
+
+
 
         const selectedTab = ref('')
         const selectTab = (tab: string) => {
             selectedTab.value = tab
         }
-        const showTab = (tab: string) => {
-            if (tab === 'add') {
-                selectedTab.value = 'add'
-            } else if (tab == 'remove') {
-                selectedTab.value = 'remove'
-            } else if (tab == 'claim') {
-                selectedTab.value = 'claim'
-            }
-            console.log("clicked");
-
-            console.log(selectedTab.value)
-        }
-        return { selectedTab, activeTab, selectTab, showTab }
+        return { selectedTab, activeTab, selectTab }
     },
 })
 </script>
