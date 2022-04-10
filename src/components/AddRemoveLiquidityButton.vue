@@ -5,21 +5,21 @@
         >
             <div
                 @click="liquidity.selectTab('add')"
-                :class="selectedTab == 'add' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
+                :class="activeTab == 'add' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Add Liquidity</button>
             </div>
             <div
                 @click="liquidity.selectTab('claim')"
-                :class="selectedTab == 'claim' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
+                :class="activeTab == 'claim' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Claim Earnings</button>
             </div>
             <div
                 @click="liquidity.selectTab('remove')"
-                :class="selectedTab == 'remove' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
+                :class="activeTab == 'remove' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Remove Liquidity</button>
@@ -31,20 +31,23 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useLiquidityStore } from '@/stores/index'
+import { storeToRefs } from 'pinia'
 
 
 export default defineComponent({
     name: "AddRemoveLiquidityButton",
     setup(props, { emit }) {
         const liquidity = useLiquidityStore()
+        const { activeTab } = storeToRefs(liquidity)
 
-
+        /*
         const selectedTab = ref('')
         const switchTab = (tab: string) => {
             emit("changeTab", tab)
             selectedTab.value = tab
         }
-        return { selectedTab, liquidity, switchTab }
+        */
+        return { activeTab, liquidity }
     },
 })
 </script>

@@ -29,12 +29,13 @@ export default defineComponent({
         const { activeTab } = storeToRefs(liquidity)
 
 
-
+        /*
         const selectedTab = ref('')
         const selectTab = (tab: string) => {
             selectedTab.value = tab
         }
-        return { selectedTab, activeTab, selectTab }
+        */
+        return { activeTab }
     },
 })
 </script>
