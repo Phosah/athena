@@ -75,7 +75,7 @@ export default defineComponent({
     name: "LiquidityPool",
     components: { LiquiditySearchBox, LiquidityPoolDropdown, PoolsTableView, PoolsBoxView },
     setup() {
-        const selectedView = ref('')
+        const selectedView = ref('table')
         const selectView = (tab: string) => {
             selectedView.value = tab
         }

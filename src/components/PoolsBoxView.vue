@@ -33,14 +33,25 @@
                 <div
                     class="flex items-center space-x-4 justify-between mb-6 font-sora font-semibold text-xs"
                 >
-                    <button class="flex-auto h-14 px-6 bg-brand-gray-5 rounded-md">Remove</button>
                     <button
+                        @click="displayTab('remove')"
+                        class="flex-auto h-14 px-6 bg-brand-gray-5 rounded-md"
+                    >
+                        <router-link to="/addremoveliquidity">Remove</router-link>
+                    </button>
+                    <button
+                        @click="displayTab('claim')"
                         class="flex-auto h-14 px-6 border border-brand-blue-4 rounded-md"
-                    >Claim Earnings</button>
+                    >
+                        <router-link to="/addremoveliquidity">Claim Earnings</router-link>
+                    </button>
                 </div>
                 <button
+                    @click="displayTab('add')"
                     class="mb-6 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
-                >Add Liquidity</button>
+                >
+                    <router-link to="/addremoveliquidity">Add Liquidity</router-link>
+                </button>
                 <div>
                     <div class="flex items-center justify-center space-x-4">
                         <p>More Details</p>
@@ -65,8 +76,11 @@ export default defineComponent({
             required: true
         }
     },
-    setup(props) {
-
+    setup(props, { emit }) {
+        const displayTab = (tab: string) => {
+            emit("changeTab", tab)
+        }
+        return { displayTab }
     },
 })
 </script>

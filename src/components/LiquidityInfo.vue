@@ -20,17 +20,15 @@
             <div class="flex justify-center mb-6">
                 <img src="../assets/risk-warning-icon.png" alt="Risk warning" />
             </div>
-            <div class="w-9/12 mx-auto">
+            <div class="w-10/12 mx-auto">
                 <div class="mb-12 text-center">
-                    <h2 class="mb-6 text-xl font-bold">Risk Warning</h2>
-                    <p
-                        class="text-sm"
-                    >Adding liquidity into a liquid pool and becoming a liquidity provider is not risk-free. When the market price of tokens fluctuates greatly, the staking income may be lower than the income of ordinary holding of the tokens, and losses may even occur. For more details about the principle of Liquidity, please refer to Binance Liquid Swap Terms of Use.</p>
+                    <h2 class="mb-6 text-2xl font-test-founders-bold">Risk Warning</h2>
+                    <p>Adding liquidity into a liquid pool and becoming a liquidity provider is not risk-free. When the market price of tokens fluctuates greatly, the staking income may be lower than the income of ordinary holding of the tokens, and losses may even occur. For more details about the principle of Liquidity, please refer to Binance Liquid Swap Terms of Use.</p>
                 </div>
                 <div class="flex items-center space-x-6">
                     <button class="flex-1 py-4 bg-[#2F2F36] font-bold rounded-md">Cancel</button>
                     <button
-                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
+                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-sora font-bold rounded-md"
                     >Continue</button>
                 </div>
             </div>
