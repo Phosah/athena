@@ -38,7 +38,6 @@ export default defineComponent({
         const switchTab = (tab: string) => {
             emit("changeTab", tab)
             selectedTab.value = tab
-            console.log(selectedTab.value)
         }
         return { selectedTab, switchTab }
     },

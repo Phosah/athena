@@ -2,11 +2,12 @@
     <div>
         <AddRemoveLiquidityButton @changeTab="selectTab" />
 
-        <AddLiquidity v-show="selectedTab == 'add'" @changeTab="showTab" />
+        <AddLiquidity v-show="activeTab == 'add'" @changeTab="showTab" />
         <ClaimEarnings v-show="selectedTab == 'claim'" @changeTab="showTab" />
         <RemoveLiquidity v-show="selectedTab == 'remove'" @changeTab="showTab" />
         <RemoveLiquidityDetailed v-show="selectedTab == 'remove'" />
         <LiquidityInfo />
+        <div>{{ activeTab }}</div>
     </div>
 </template>
 
@@ -18,10 +19,15 @@ import ClaimEarnings from '../components/ClaimEarnings.vue'
 import RemoveLiquidity from '../components/RemoveLiquidity.vue'
 import RemoveLiquidityDetailed from '../components/RemoveLiquidityDetailed.vue'
 import LiquidityInfo from '../components/LiquidityInfo.vue'
+import { useLiquidityStore } from '@/stores/index'
+import { storeToRefs } from 'pinia'
 
 export default defineComponent({
     components: { AddRemoveLiquidityButton, AddLiquidity, ClaimEarnings, RemoveLiquidity, RemoveLiquidityDetailed, LiquidityInfo },
     setup() {
+        const liquidity = useLiquidityStore()
+        const { activeTab } = liquidity
+
         const selectedTab = ref('')
         const selectTab = (tab: string) => {
             selectedTab.value = tab
@@ -38,7 +44,7 @@ export default defineComponent({
 
             console.log(selectedTab.value)
         }
-        return { selectedTab, selectTab, showTab }
+        return { selectedTab, activeTab, selectTab, showTab }
     },
 })
 </script>

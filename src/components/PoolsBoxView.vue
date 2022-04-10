@@ -33,21 +33,18 @@
                 <div
                     class="flex items-center space-x-4 justify-between mb-6 font-sora font-semibold text-xs"
                 >
-                    <button
-                        @click="displayTab('remove')"
-                        class="flex-auto h-14 px-6 bg-brand-gray-5 rounded-md"
-                    >
+                    <button @click="showTab" class="flex-auto h-14 px-6 bg-brand-gray-5 rounded-md">
                         <router-link to="/addremoveliquidity">Remove</router-link>
                     </button>
                     <button
-                        @click="displayTab('claim')"
+                        @click="showTab"
                         class="flex-auto h-14 px-6 border border-brand-blue-4 rounded-md"
                     >
                         <router-link to="/addremoveliquidity">Claim Earnings</router-link>
                     </button>
                 </div>
                 <button
-                    @click="displayTab('add')"
+                    @click="showTab"
                     class="mb-6 w-full py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
                 >
                     <router-link to="/addremoveliquidity">Add Liquidity</router-link>
@@ -67,7 +64,7 @@
 import { defineComponent } from 'vue'
 import type PoolsTable from '@/types/PoolsTable'
 import type { PropType } from 'vue'
-import { useStore } from 'vuex'
+import { useLiquidityStore } from '@/stores/index'
 
 
 export default defineComponent({
@@ -79,10 +76,18 @@ export default defineComponent({
         }
     },
     setup(props, { emit }) {
+        const liquidity = useLiquidityStore()
+        const showTab = () => {
+            liquidity.selectTab('add')
+            console.log(showTab)
+        }
+
+
+
         const displayTab = (tab: string) => {
             emit("switchTab", tab)
         }
-        return { displayTab }
+        return { displayTab, showTab }
     },
 })
 </script>
