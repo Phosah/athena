@@ -67,6 +67,8 @@
 import { defineComponent } from 'vue'
 import type PoolsTable from '@/types/PoolsTable'
 import type { PropType } from 'vue'
+import { useStore } from 'vuex'
+
 
 export default defineComponent({
     name: "PoolsBoxView",
@@ -78,7 +80,7 @@ export default defineComponent({
     },
     setup(props, { emit }) {
         const displayTab = (tab: string) => {
-            emit("changeTab", tab)
+            emit("switchTab", tab)
         }
         return { displayTab }
     },

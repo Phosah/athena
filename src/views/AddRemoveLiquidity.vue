@@ -2,9 +2,9 @@
     <div>
         <AddRemoveLiquidityButton @changeTab="selectTab" />
 
-        <AddLiquidity v-show="selectedTab == 'add'" @changeTab="selectTab" />
-        <ClaimEarnings v-show="selectedTab == 'claim'" @changeTab="selectTab" />
-        <RemoveLiquidity v-show="selectedTab == 'remove'" @changeTab="selectTab" />
+        <AddLiquidity v-show="selectedTab == 'add'" @changeTab="showTab" />
+        <ClaimEarnings v-show="selectedTab == 'claim'" @changeTab="showTab" />
+        <RemoveLiquidity v-show="selectedTab == 'remove'" @changeTab="showTab" />
         <RemoveLiquidityDetailed v-show="selectedTab == 'remove'" />
         <LiquidityInfo />
     </div>
@@ -20,13 +20,25 @@ import RemoveLiquidityDetailed from '../components/RemoveLiquidityDetailed.vue'
 import LiquidityInfo from '../components/LiquidityInfo.vue'
 
 export default defineComponent({
+    components: { AddRemoveLiquidityButton, AddLiquidity, ClaimEarnings, RemoveLiquidity, RemoveLiquidityDetailed, LiquidityInfo },
     setup() {
         const selectedTab = ref('')
         const selectTab = (tab: string) => {
             selectedTab.value = tab
         }
-        return { selectedTab, selectTab }
+        const showTab = (tab: string) => {
+            if (tab === 'add') {
+                selectedTab.value = 'add'
+            } else if (tab == 'remove') {
+                selectedTab.value = 'remove'
+            } else if (tab == 'claim') {
+                selectedTab.value = 'claim'
+            }
+            console.log("clicked");
+
+            console.log(selectedTab.value)
+        }
+        return { selectedTab, selectTab, showTab }
     },
-    components: { AddRemoveLiquidityButton, AddLiquidity, ClaimEarnings, RemoveLiquidity, RemoveLiquidityDetailed, LiquidityInfo }
 })
 </script>
