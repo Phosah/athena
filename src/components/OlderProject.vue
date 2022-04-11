@@ -5,7 +5,9 @@
                 <div
                     class="text-sm border border-brand-gray-3 border-opacity-10 rounded-xl bg-[#C3CFE2] bg-opacity-5"
                 >
-                    <img class="w-full rounded-xl" :src="project.img" :alt="project.alt" />
+                    <router-link to="/launchpadsingleproject">
+                        <img class="w-full rounded-xl" :src="project.img" :alt="project.alt" />
+                    </router-link>
                     <div class="px-6 py-8">
                         <div class="flex items-center justify-between mb-2">
                             <h2 class="text-2xl font-test-founders-semibold">{{ project.title }}</h2>

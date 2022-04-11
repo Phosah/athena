@@ -22,15 +22,15 @@
             </div>
             <div class>
                 <div class="mb-12">
-                    <h2 class="mb-6 text-xl font-bold">Confirm Investment</h2>
+                    <h2 class="mb-6 text-xl font-test-founders-bold">Confirm Investment</h2>
                     <p
                         class="text-sm"
                     >You have requested to invest 1500 ATN. Once you confirm investment, your ATN would be locked until the final token distribution. The final amount of the CRV token you would get might be less than the invested amount and your balance along side your new tokens would be sent back to your wallet. To get more insight on how this works, click here to Learn more</p>
                 </div>
                 <div class="flex items-center space-x-6">
-                    <button class="flex-1 py-4 bg-[#2F2F36] font-bold rounded-md">Cancel</button>
+                    <button class="flex-1 py-4 bg-[#2F2F36] font-sora font-bold rounded-md">Cancel</button>
                     <button
-                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-bold rounded-md"
+                        class="flex-1 py-4 text-brand-blue-6 bg-gradient-to-tr from-brand-blue-2 to-brand-blue-3 font-sora font-bold rounded-md"
                     >Confirm Investment</button>
                 </div>
             </div>
