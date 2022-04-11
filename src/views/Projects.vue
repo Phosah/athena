@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-if="launchpad">
+        <div v-show="activeTab == 'launchpad'">
             <Launchpad />
         </div>
-        <div v-if="launchpool">
+        <div v-show="activeTab == 'launchpool'">
             <Launchpool />
         </div>
     </div>
@@ -13,14 +13,16 @@
 import { defineComponent, ref } from 'vue'
 import Launchpad from "@/components/Launchpad.vue"
 import Launchpool from "../components/Launchpool.vue"
+import { useLaunchStore } from '@/stores/launch'
+import { storeToRefs } from 'pinia'
 
 export default defineComponent({
     name: "Projects",
     components: { Launchpad, Launchpool },
     setup() {
-        const launchpool = ref(true)
-        const launchpad = ref(false)
-        return { launchpool, launchpad }
+        const launch = useLaunchStore()
+        const { activeTab } = storeToRefs(launch)
+        return { activeTab }
     },
 })
 </script>
