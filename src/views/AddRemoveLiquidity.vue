@@ -7,7 +7,6 @@
         <RemoveLiquidity v-show="activeTab == 'remove'" />
         <RemoveLiquidityDetailed v-show="activeTab == 'remove'" />
         <LiquidityInfo />
-        <div>{{ activeTab }}</div>
     </div>
 </template>
 

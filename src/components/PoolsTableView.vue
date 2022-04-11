@@ -39,20 +39,32 @@
                     >Earned: {{ pool.investmentCrypto }}</p>
                 </div>
                 <div class="flex-1 flex items-center space-x-4">
-                    <div
-                        class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
-                    >
-                        <img src="../assets/plus-icon.svg" alt="Plus icon" />
+                    <div @click="liquidity.selectTab('add')">
+                        <router-link to="/addremoveliquidity">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
+                            >
+                                <img src="../assets/plus-icon.svg" alt="Plus icon" />
+                            </div>
+                        </router-link>
                     </div>
-                    <div
-                        class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
-                    >
-                        <img src="../assets/minus-icon.svg" alt="Minus icon" />
+                    <div @click="liquidity.selectTab('remove')">
+                        <router-link to="/addremoveliquidity">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
+                            >
+                                <img src="../assets/minus-icon.svg" alt="Minus icon" />
+                            </div>
+                        </router-link>
                     </div>
-                    <div
-                        class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
-                    >
-                        <img src="../assets/download-icon.svg" alt="Download icon" />
+                    <div @click="liquidity.selectTab('claim')">
+                        <router-link to="/addremoveliquidity">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-brand-gray-5 rounded-full"
+                            >
+                                <img src="../assets/download-icon.svg" alt="Download icon" />
+                            </div>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -64,6 +76,7 @@
 import { defineComponent } from 'vue'
 import type PoolsTable from '@/types/PoolsTable'
 import type { PropType } from 'vue'
+import { useLiquidityStore } from '@/stores/index'
 
 export default defineComponent({
     name: "PoolsTableView",
@@ -73,8 +86,10 @@ export default defineComponent({
             required: true
         }
     },
-    setup(props) {
+    setup(props, { emit }) {
+        const liquidity = useLiquidityStore()
 
+        return { liquidity, }
     },
 })
 </script>
