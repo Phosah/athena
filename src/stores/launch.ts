@@ -8,7 +8,6 @@ export const useLaunchStore = defineStore({
     actions: {
         selectTab (tab: string) {
             this.activeTab = tab
-            console.log(tab)
         }
     },
     getters: {}

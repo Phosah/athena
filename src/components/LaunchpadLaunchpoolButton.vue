@@ -5,14 +5,14 @@
         >
             <div
                 @click="launch.selectTab('launchpad')"
-                :class="launch.activeTab == 'launchpad' ? 'h-10 bg-brand-gray-5 text-white font-bold rounded-full' : 'text-brand-gray-3'"
+                :class="launch.activeTab == 'launchpad' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Launchpad</button>
             </div>
             <div
                 @click="launch.selectTab('launchpool')"
-                :class="launch.activeTab == 'launchpool' ? 'h-10 bg-brand-gray-5 text-white font-bold rounded-full' : 'text-brand-gray-3'"
+                :class="launch.activeTab == 'launchpool' ? 'h-10 bg-brand-gray-5 text-white font-test-founders-bold rounded-full' : 'text-brand-gray-3'"
                 class="flex-1 flex justify-center"
             >
                 <button>Launchpool</button>

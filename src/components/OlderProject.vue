@@ -5,19 +5,21 @@
                 <div
                     class="text-sm border border-brand-gray-3 border-opacity-10 rounded-xl bg-[#C3CFE2] bg-opacity-5"
                 >
-                    <img class="rounded-xl" :src="project.img" :alt="project.alt" />
+                    <img class="w-full rounded-xl" :src="project.img" :alt="project.alt" />
                     <div class="px-6 py-8">
                         <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-xl font-bold">{{ project.title }}</h2>
+                            <h2 class="text-2xl font-test-founders-semibold">{{ project.title }}</h2>
                             <div
-                                class="px-4 py-1 bg-[#FEF8ED] text-[#F19C2C] rounded-md"
+                                class="px-4 py-1 bg-[#FEF8ED] text-[#F19C2C] rounded-md font-test-founders-medium"
                             >{{ project.status }}</div>
                         </div>
                         <p class="mb-6 text-brand-gray-2">{{ project.content }}</p>
                         <div>
                             <div class="flex items-center justify-between space-x-2 mb-2">
                                 <p class="text-brand-gray-2">Progress</p>
-                                <h2 class="font-bold">{{ project.participants }} Participants</h2>
+                                <h2
+                                    class="font-test-founders-medium"
+                                >{{ project.participants }} Participants</h2>
                             </div>
                             <div class="w-full h-2 bg-brand-gray-5 rounded-full">
                                 <div
@@ -26,7 +28,7 @@
                             </div>
                             <div class="flex items-center justify-between mt-2">
                                 <p>{{ project.progressPercent }}</p>
-                                <p>{{ project.atntokens }} ATN</p>
+                                <p class="font-test-founders-medium">{{ project.atntokens }} ATN</p>
                             </div>
                         </div>
                     </div>
