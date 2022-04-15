@@ -5,12 +5,11 @@
         </div>
         <div v-show="activeTab == 'launchpool'">
             <Launchpool />
-        </div>
-    </div>
+        </div>  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import Launchpad from "@/components/Launchpad.vue"
 import Launchpool from "../components/Launchpool.vue"
 import { useLaunchStore } from '@/stores/launch'
