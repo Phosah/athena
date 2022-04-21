@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-between space-x-4 mb-14">
-        <p class="text-4xl font-test-founders-semibold">Dashboard</p>
+        <p class="text-4xl font-test-founders-semibold">{{ $router.name }}</p>
         <div class="flex items-center space-x-8">
             <SearchBox />
             <NotificationBox />
@@ -19,13 +19,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 import SearchBox from './SearchBox.vue'
 import NotificationBox from './NotificationBox.vue'
 
 export default defineComponent({
+    components: { SearchBox, NotificationBox },
     setup() {
+
+        const routeName = computed(() => {
+            return router.name
+        })
+        return { routeName }
     },
-    components: { SearchBox, NotificationBox }
 })
 </script>
